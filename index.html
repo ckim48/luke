@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Heartbeat</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/glightbox@3.3.0/dist/css/glightbox.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/swiper@11.1.1/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="sitename">Heartbeat</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+
+      <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in">
+
+      <div class="container d-flex flex-column align-items-center text-center">
+        <h2 data-aos="fade-up" data-aos-delay="100">Hearbeat</h2>
+        <p data-aos="fade-up" data-aos-delay="200">Here are videos</p>
+        <div data-aos="fade-up" data-aos-delay="300">
+          <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox pulsating-play-btn"></a>
+        </div>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+     
+
+    </section><!-- /About Section -->
+
+
+<section id="cpr-videos" class="section py-5" style="background: #f9f9f9;">
+  <div class="container" data-aos="fade-up">
+
+    <!-- Section Header -->
+    <div class="section-title">
+      <div class="section-title-label">
+        <small>Video Collection</small>
+        <h2>CPR Training Library</h2>
+      </div>
+      <p>
+        Explore hands-on CPR techniques taught by experts. Each video is clear, practical, and ready when you need it most.
+      </p>
+    </div>
+
+
+
+
+    <!-- Search & Filter -->
+    <div class="row g-3 mb-4 align-items-center">
+      <div class="col-md-7">
+        <input type="text" id="videoSearch" class="form-control border-0 shadow-sm px-4 py-3 rounded-pill" placeholder="Search videos..." />
+      </div>
+      <div class="col-md-5 d-flex gap-2 flex-wrap justify-content-end">
+        <button class="btn btn-sm filter-btn rounded-pill" data-filter="*">All</button>
+        <button class="btn btn-sm filter-btn rounded-pill" data-filter=".basic">Basic CPR</button>
+        <button class="btn btn-sm filter-btn rounded-pill" data-filter=".infant">Infant CPR</button>
+        <button class="btn btn-sm filter-btn rounded-pill" data-filter=".aed">AED Usage</button>
+      </div>
+    </div>
+
+    <!-- Video Grid -->
+    <div class="row g-4" id="videoGrid">
+
+      <!-- Sample Videos -->
+      <div class="col-md-6 element-item basic" data-title="Basic CPR Techniques">
+        <div class="card border-0 shadow-lg rounded-4 overflow-hidden h-100 video-card">
+          <div class="row g-0">
+            <div class="col-md-6 bg-dark-subtle">
+              <div class="ratio ratio-16x9">
+                <iframe src="https://www.youtube.com/embed/Y7f98aduVJ8" title="Basic CPR" allowfullscreen></iframe>
+              </div>
+            </div>
+            <div class="col-md-6 p-4 d-flex flex-column justify-content-between">
+              <div>
+                <h5 class="fw-semibold">Basic CPR Techniques</h5>
+                <p class="text-muted small">Step-by-step basic chest compressions and breath support.</p>
+              </div>
+              <span class="badge rounded-pill bg-secondary-subtle text-dark">Basic CPR</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 element-item infant" data-title="Infant CPR Instructions">
+        <div class="card border-0 shadow-lg rounded-4 overflow-hidden h-100 video-card">
+          <div class="row g-0">
+            <div class="col-md-6 bg-dark-subtle">
+              <div class="ratio ratio-16x9">
+                <iframe src="https://www.youtube.com/embed/LmN7O1PRiVg" title="Infant CPR" allowfullscreen></iframe>
+              </div>
+            </div>
+            <div class="col-md-6 p-4 d-flex flex-column justify-content-between">
+              <div>
+                <h5 class="fw-semibold">Infant CPR Instructions</h5>
+                <p class="text-muted small">Delicate CPR methods for babies and infants under 1 year.</p>
+              </div>
+              <span class="badge rounded-pill bg-secondary-subtle text-dark">Infant CPR</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 element-item aed" data-title="How to Use an AED">
+        <div class="card border-0 shadow-lg rounded-4 overflow-hidden h-100 video-card">
+          <div class="row g-0">
+            <div class="col-md-6 bg-dark-subtle">
+              <div class="ratio ratio-16x9">
+                <iframe src="https://www.youtube.com/embed/5E0h5NfH8FY" title="Using AED" allowfullscreen></iframe>
+              </div>
+            </div>
+            <div class="col-md-6 p-4 d-flex flex-column justify-content-between">
+              <div>
+                <h5 class="fw-semibold">How to Use an AED</h5>
+                <p class="text-muted small">Understand and apply Automated External Defibrillator procedures.</p>
+              </div>
+              <span class="badge rounded-pill bg-secondary-subtle text-dark">AED Usage</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 element-item basic" data-title="CPR for Teenagers">
+        <div class="card border-0 shadow-lg rounded-4 overflow-hidden h-100 video-card">
+          <div class="row g-0">
+            <div class="col-md-6 bg-dark-subtle">
+              <div class="ratio ratio-16x9">
+                <iframe src="https://www.youtube.com/embed/jTRPZD3pH8s" title="Teen CPR" allowfullscreen></iframe>
+              </div>
+            </div>
+            <div class="col-md-6 p-4 d-flex flex-column justify-content-between">
+              <div>
+                <h5 class="fw-semibold">CPR for Teenagers</h5>
+                <p class="text-muted small">Age-appropriate CPR approach for teens and young adults.</p>
+              </div>
+              <span class="badge rounded-pill bg-secondary-subtle text-dark">Basic CPR</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 element-item aed" data-title="CPR + AED in Real Life">
+        <div class="card border-0 shadow-lg rounded-4 overflow-hidden h-100 video-card">
+          <div class="row g-0">
+            <div class="col-md-6 bg-dark-subtle">
+              <div class="ratio ratio-16x9">
+                <iframe src="https://www.youtube.com/embed/QFvKj85sGxE" title="CPR with AED" allowfullscreen></iframe>
+              </div>
+            </div>
+            <div class="col-md-6 p-4 d-flex flex-column justify-content-between">
+              <div>
+                <h5 class="fw-semibold">CPR + AED in Real Life</h5>
+                <p class="text-muted small">Live footage and walkthrough of a CPR rescue using AED.</p>
+              </div>
+              <span class="badge rounded-pill bg-secondary-subtle text-dark">AED Usage</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 element-item infant" data-title="Choking Infant Rescue">
+        <div class="card border-0 shadow-lg rounded-4 overflow-hidden h-100 video-card">
+          <div class="row g-0">
+            <div class="col-md-6 bg-dark-subtle">
+              <div class="ratio ratio-16x9">
+                <iframe src="https://www.youtube.com/embed/GV9C5Fz7v1s" title="Choking Infant" allowfullscreen></iframe>
+              </div>
+            </div>
+            <div class="col-md-6 p-4 d-flex flex-column justify-content-between">
+              <div>
+                <h5 class="fw-semibold">Choking Infant Rescue</h5>
+                <p class="text-muted small">Back blows and chest thrusts when an infant is choking.</p>
+              </div>
+              <span class="badge rounded-pill bg-secondary-subtle text-dark">Infant CPR</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+    <div class="container">
+        <div class="copyright">
+          <span>Copyright</span> <strong class="px-1 sitename">Luke</strong> <span>All Rights Reserved</span>
+        </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/glightbox@3.3.0/dist/js/glightbox.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@srexi/purecounterjs@1.5.0/dist/purecounter_vanilla.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/isotope-layout@3.0.6/dist/isotope.pkgd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11.1.1/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const grid = document.querySelector('#videoGrid');
+    const iso = new Isotope(grid, {
+      itemSelector: '.element-item',
+      layoutMode: 'fitRows',
+      getSortData: {
+        title: '[data-title]'
+      }
+    });
+
+    // Filter buttons
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const filterValue = button.getAttribute('data-filter');
+        iso.arrange({ filter: filterValue });
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+      });
+    });
+
+    // Search field
+    const searchInput = document.querySelector('#videoSearch');
+    searchInput.addEventListener('input', () => {
+      const searchValue = searchInput.value.toLowerCase();
+      iso.arrange({
+        filter: item => item.getAttribute('data-title').toLowerCase().includes(searchValue)
+      });
+    });
+  });
+</script>
+
+
+
+</body>
+
+</html>
