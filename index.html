@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Heartbeat</title>
+  <title>Heartsave</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
@@ -26,7 +26,150 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+<style>
+.ratio-9x16 {
+  aspect-ratio: 9 / 16;
+  width: 100%;
+  max-height: 450px; /* Limit height on desktop */
+  overflow: hidden;
+}
 
+@media (max-width: 768px) {
+  .ratio-9x16 {
+    max-height: none; /* Allow full height on mobile */
+  }
+}
+
+.video-card {
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.video-card:hover {
+  transform: translateY(-2px);
+}
+
+.video-card video,
+.video-card video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+}
+.hero {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero .overlay {
+  backdrop-filter: blur(2px);
+}
+
+.glightbox.btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.heartbeat-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 23px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #fff;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #ff4e50, #f9d423);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.heartbeat-btn .icon {
+  font-size: 1.5rem;
+}
+
+.heartbeat-btn:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(90deg, #f9d423, #ff4e50);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+  color:black;
+}
+
+.heartbeat-btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.1);
+  animation: pulse 2s infinite ease-in-out;
+  border-radius: 999px;
+  z-index: 0;
+}
+
+.heartbeat-btn .text,
+.heartbeat-btn .icon {
+  z-index: 1;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+}
+.mockup-phone {
+  width: 300px;
+  height: 570px;
+  background: #111;
+  border: 16px solid #000;
+  border-radius: 40px;
+  padding: 10px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.6);
+  position: relative;
+}
+
+.mockup-phone::before {
+  content: '';
+  width: 50px;
+  height: 5px;
+  background: #333;
+  border-radius: 10px;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.phone-screen {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 24px;
+}
+@media (max-width: 768px) {
+  .mockup-phone {
+    width: 180px;
+    height: 360px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
+
+</style>
 </head>
 
 <body class="index-page">
@@ -37,7 +180,7 @@
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 class="sitename">Heartbeat</h1>
+        <h1 class="sitename">Heartsave</h1>
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -54,20 +197,39 @@
 
   <main class="main">
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero section dark-background">
 
-      <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in">
+<section id="hero" class="hero d-flex align-items-center" style="min-height: 100vh; background: url('assets/img/hero-bg.jpg') center center / cover no-repeat;">
+  <div class="overlay position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0, 0, 0, 0.6); z-index: 1;"></div>
+  <div class="container position-relative z-2" data-aos="fade-up">
+    <div class="row align-items-center">
+      
+      <!-- Left: Text Content -->
+      <div class="col-lg-6 text-light">
+        <h1 class="display-2 fw-bold text-light mb-4">HeartSave</h1>
+        <p class="lead mb-4">Empowering you to take action.<br>Learn CPR. Save lives.</p>
+        <a href="#cpr-videos" class="heartbeat-btn">
+          <span class="icon"><i class="bi bi-play-circle-fill"></i></span>
+          <span class="text">Watch Videos</span>
+        </a>
+      </div>
 
-      <div class="container d-flex flex-column align-items-center text-center">
-        <h2 data-aos="fade-up" data-aos-delay="100">Hearbeat</h2>
-        <p data-aos="fade-up" data-aos-delay="200">Here are videos</p>
-        <div data-aos="fade-up" data-aos-delay="300">
-          <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox pulsating-play-btn"></a>
+      <!-- Right: Video in Mockup -->
+      <div class="col-lg-6 d-flex justify-content-center mt-5 mt-lg-0">
+        <div class="mockup-phone">
+          <div class="phone-screen">
+            <video autoplay muted loop playsinline style="width:100%; height:100%; object-fit:cover; border-radius:24px;">
+              <source src="assets/img/8.mp4" type="video/mp4">
+            </video>
+          </div>
         </div>
       </div>
 
-    </section><!-- /Hero Section -->
+    </div>
+  </div>
+</section>
+
+
+
 
     <!-- About Section -->
     <section id="about" class="about section">
@@ -108,124 +270,126 @@
     </div>
 
     <!-- Video Grid -->
-    <div class="row g-4" id="videoGrid">
-
-      <!-- Sample Videos -->
-      <div class="col-md-6 element-item basic" data-title="Basic CPR Techniques">
-        <div class="card border-0 shadow-lg rounded-4 overflow-hidden h-100 video-card">
-          <div class="row g-0">
-            <div class="col-md-6 bg-dark-subtle">
-              <div class="ratio ratio-16x9">
-                <iframe src="https://www.youtube.com/embed/Y7f98aduVJ8" title="Basic CPR" allowfullscreen></iframe>
-              </div>
-            </div>
-            <div class="col-md-6 p-4 d-flex flex-column justify-content-between">
-              <div>
-                <h5 class="fw-semibold">Basic CPR Techniques</h5>
-                <p class="text-muted small">Step-by-step basic chest compressions and breath support.</p>
-              </div>
-              <span class="badge rounded-pill bg-secondary-subtle text-dark">Basic CPR</span>
-            </div>
-          </div>
+   <div class="row g-4" id="videoGrid">
+    <!-- 9 Video Blocks -->
+    <div class="col-md-6 col-lg-4 element-item basic" data-title="Size-Up">
+      <div class="card video-card text-center">
+        <div class="ratio ratio-9x16">
+          <video controls><source src="assets/img/1.mp4" type="video/mp4"></video>
+        </div>
+        <div class="p-3">
+          <h5 class="fw-semibold mt-3">Size-Up</h5>
+          <p class="text-muted small">Before helping someone who is hurt, it’s important to stay calm and make sure the scene is safe for you...</p>
+          <span class="badge rounded-pill bg-secondary-subtle text-dark">Basic CPR</span>
         </div>
       </div>
-
-      <div class="col-md-6 element-item infant" data-title="Infant CPR Instructions">
-        <div class="card border-0 shadow-lg rounded-4 overflow-hidden h-100 video-card">
-          <div class="row g-0">
-            <div class="col-md-6 bg-dark-subtle">
-              <div class="ratio ratio-16x9">
-                <iframe src="https://www.youtube.com/embed/LmN7O1PRiVg" title="Infant CPR" allowfullscreen></iframe>
-              </div>
-            </div>
-            <div class="col-md-6 p-4 d-flex flex-column justify-content-between">
-              <div>
-                <h5 class="fw-semibold">Infant CPR Instructions</h5>
-                <p class="text-muted small">Delicate CPR methods for babies and infants under 1 year.</p>
-              </div>
-              <span class="badge rounded-pill bg-secondary-subtle text-dark">Infant CPR</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6 element-item aed" data-title="How to Use an AED">
-        <div class="card border-0 shadow-lg rounded-4 overflow-hidden h-100 video-card">
-          <div class="row g-0">
-            <div class="col-md-6 bg-dark-subtle">
-              <div class="ratio ratio-16x9">
-                <iframe src="https://www.youtube.com/embed/5E0h5NfH8FY" title="Using AED" allowfullscreen></iframe>
-              </div>
-            </div>
-            <div class="col-md-6 p-4 d-flex flex-column justify-content-between">
-              <div>
-                <h5 class="fw-semibold">How to Use an AED</h5>
-                <p class="text-muted small">Understand and apply Automated External Defibrillator procedures.</p>
-              </div>
-              <span class="badge rounded-pill bg-secondary-subtle text-dark">AED Usage</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6 element-item basic" data-title="CPR for Teenagers">
-        <div class="card border-0 shadow-lg rounded-4 overflow-hidden h-100 video-card">
-          <div class="row g-0">
-            <div class="col-md-6 bg-dark-subtle">
-              <div class="ratio ratio-16x9">
-                <iframe src="https://www.youtube.com/embed/jTRPZD3pH8s" title="Teen CPR" allowfullscreen></iframe>
-              </div>
-            </div>
-            <div class="col-md-6 p-4 d-flex flex-column justify-content-between">
-              <div>
-                <h5 class="fw-semibold">CPR for Teenagers</h5>
-                <p class="text-muted small">Age-appropriate CPR approach for teens and young adults.</p>
-              </div>
-              <span class="badge rounded-pill bg-secondary-subtle text-dark">Basic CPR</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6 element-item aed" data-title="CPR + AED in Real Life">
-        <div class="card border-0 shadow-lg rounded-4 overflow-hidden h-100 video-card">
-          <div class="row g-0">
-            <div class="col-md-6 bg-dark-subtle">
-              <div class="ratio ratio-16x9">
-                <iframe src="https://www.youtube.com/embed/QFvKj85sGxE" title="CPR with AED" allowfullscreen></iframe>
-              </div>
-            </div>
-            <div class="col-md-6 p-4 d-flex flex-column justify-content-between">
-              <div>
-                <h5 class="fw-semibold">CPR + AED in Real Life</h5>
-                <p class="text-muted small">Live footage and walkthrough of a CPR rescue using AED.</p>
-              </div>
-              <span class="badge rounded-pill bg-secondary-subtle text-dark">AED Usage</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6 element-item infant" data-title="Choking Infant Rescue">
-        <div class="card border-0 shadow-lg rounded-4 overflow-hidden h-100 video-card">
-          <div class="row g-0">
-            <div class="col-md-6 bg-dark-subtle">
-              <div class="ratio ratio-16x9">
-                <iframe src="https://www.youtube.com/embed/GV9C5Fz7v1s" title="Choking Infant" allowfullscreen></iframe>
-              </div>
-            </div>
-            <div class="col-md-6 p-4 d-flex flex-column justify-content-between">
-              <div>
-                <h5 class="fw-semibold">Choking Infant Rescue</h5>
-                <p class="text-muted small">Back blows and chest thrusts when an infant is choking.</p>
-              </div>
-              <span class="badge rounded-pill bg-secondary-subtle text-dark">Infant CPR</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
     </div>
+
+    <div class="col-md-6 col-lg-4 element-item basic" data-title="Initial Assessment">
+      <div class="card video-card text-center">
+        <div class="ratio ratio-9x16">
+          <video controls><source src="assets/img/2.mp4" type="video/mp4"></video>
+        </div>
+        <div class="p-3">
+          <h5 class="fw-semibold mt-3">Initial Assessment</h5>
+          <p class="text-muted small">Once the scene is safe, the next step is to check if the person is breathing and has a pulse...</p>
+          <span class="badge rounded-pill bg-secondary-subtle text-dark">Basic CPR</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-4 element-item basic" data-title="Head-to-Toe Examination">
+      <div class="card video-card text-center">
+        <div class="ratio ratio-9x16">
+          <video controls><source src="assets/img/3.mp4" type="video/mp4"></video>
+        </div>
+        <div class="p-3">
+          <h5 class="fw-semibold mt-3">Head-to-Toe Examination</h5>
+          <p class="text-muted small">A complete body check helps identify hidden injuries...</p>
+          <span class="badge rounded-pill bg-secondary-subtle text-dark">Basic CPR</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-4 element-item basic" data-title="Checking Vital Signs">
+      <div class="card video-card text-center">
+        <div class="ratio ratio-9x16">
+          <video controls><source src="assets/img/4.mp4" type="video/mp4"></video>
+        </div>
+        <div class="p-3">
+          <h5 class="fw-semibold mt-3">Checking Vital Signs</h5>
+          <p class="text-muted small">Vital signs give important clues about a person's condition...</p>
+          <span class="badge rounded-pill bg-secondary-subtle text-dark">Basic CPR</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-4 element-item basic" data-title="Patient History (SAMPLE)">
+      <div class="card video-card text-center">
+        <div class="ratio ratio-9x16">
+          <video controls><source src="assets/img/5.mp4" type="video/mp4"></video>
+        </div>
+        <div class="p-3">
+          <h5 class="fw-semibold mt-3">Patient History (SAMPLE)</h5>
+          <p class="text-muted small">Asking the right questions helps responders provide better care using the SAMPLE method...</p>
+          <span class="badge rounded-pill bg-secondary-subtle text-dark">Basic CPR</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-4 element-item basic" data-title="Spinal Injury Check">
+      <div class="card video-card text-center">
+        <div class="ratio ratio-9x16">
+          <video controls><source src="assets/img/6.mp4" type="video/mp4"></video>
+        </div>
+        <div class="p-3">
+          <h5 class="fw-semibold mt-3">Spinal Injury Check</h5>
+          <p class="text-muted small">If someone has fallen or been in a crash, their spine could be injured...</p>
+          <span class="badge rounded-pill bg-secondary-subtle text-dark">Basic CPR</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-4 element-item basic" data-title="Choking Response">
+      <div class="card video-card text-center">
+        <div class="ratio ratio-9x16">
+          <video controls><source src="assets/img/7.mp4" type="video/mp4"></video>
+        </div>
+        <div class="p-3">
+          <h5 class="fw-semibold mt-3">Choking Response</h5>
+          <p class="text-muted small">Choking can become life-threatening quickly. This video teaches how to recognize and respond...</p>
+          <span class="badge rounded-pill bg-secondary-subtle text-dark">Basic CPR</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-4 element-item basic" data-title="CPR Basics">
+      <div class="card video-card text-center">
+        <div class="ratio ratio-9x16">
+          <video controls><source src="assets/img/8.mp4" type="video/mp4"></video>
+        </div>
+        <div class="p-3">
+          <h5 class="fw-semibold mt-3">CPR Basics</h5>
+          <p class="text-muted small">When a person isn’t breathing and has no pulse, CPR can save their life...</p>
+          <span class="badge rounded-pill bg-secondary-subtle text-dark">Basic CPR</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-4 element-item aed" data-title="Using an AED">
+      <div class="card video-card text-center">
+        <div class="ratio ratio-9x16">
+          <video controls><source src="assets/img/9.mp4" type="video/mp4"></video>
+        </div>
+        <div class="p-3">
+          <h5 class="fw-semibold mt-3">Using an AED</h5>
+          <p class="text-muted small">An Automated External Defibrillator (AED) can restart a heart during sudden cardiac arrest...</p>
+          <span class="badge rounded-pill bg-secondary-subtle text-dark">AED Usage</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
   </div>
 </section>
 
@@ -259,38 +423,39 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-  <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const grid = document.querySelector('#videoGrid');
-    const iso = new Isotope(grid, {
-      itemSelector: '.element-item',
-      layoutMode: 'fitRows',
-      getSortData: {
-        title: '[data-title]'
-      }
-    });
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const grid = document.querySelector('#videoGrid');
+  const iso = new Isotope(grid, {
+    itemSelector: '.element-item',
+    layoutMode: 'fitRows',
+    getSortData: {
+      title: '[data-title]'
+    }
+  });
 
-    // Filter buttons
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    filterButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        const filterValue = button.getAttribute('data-filter');
-        iso.arrange({ filter: filterValue });
-        filterButtons.forEach(btn => btn.classList.remove('active'));
-        button.classList.add('active');
-      });
-    });
-
-    // Search field
-    const searchInput = document.querySelector('#videoSearch');
-    searchInput.addEventListener('input', () => {
-      const searchValue = searchInput.value.toLowerCase();
-      iso.arrange({
-        filter: item => item.getAttribute('data-title').toLowerCase().includes(searchValue)
-      });
+  // Filter buttons
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const filterValue = button.getAttribute('data-filter');
+      iso.arrange({ filter: filterValue });
+      filterButtons.forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
     });
   });
+
+  // Search input
+  const searchInput = document.querySelector('#videoSearch');
+  searchInput.addEventListener('input', () => {
+    const searchValue = searchInput.value.toLowerCase();
+    iso.arrange({
+      filter: item => item.getAttribute('data-title').toLowerCase().includes(searchValue)
+    });
+  });
+});
 </script>
+
 
 
 
