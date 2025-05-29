@@ -833,6 +833,9 @@ section,
   max-width: 600px;
   line-height: 1.6;
 }
+.hero p{
+  font-size: 1.5rem;
+}
 
 .hero-cta .play-btn {
   display: inline-flex;
