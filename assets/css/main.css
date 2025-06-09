@@ -779,6 +779,38 @@ section,
   margin-bottom: 0;
   color: color-mix(in srgb, var(--default-color) 90%, white 50%);
 }
+@media (max-width: 768px) {
+.section-title-mobile h2 {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.4rem;
+}
+
+.section-title-mobile h2::after {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 3px;
+  background-color: #fbb813; 
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  border-radius: 2px;
+}
+
+  .section-title-mobile h2 {
+    font-size: 1.5rem;
+    line-height: 1.3;
+  }
+
+  .section-title-mobile p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+  }
+/*  .mm text-align*/
+}
+
 
 /*--------------------------------------------------------------
 # Hero Section
