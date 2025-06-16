@@ -225,6 +225,9 @@
     gap: 1.5rem;
     margin-bottom: 120px;
   }
+  .video-row-minimal2 {
+    margin-bottom: 0px;
+  }
 
   .video-col-minimal {
     width: 100% !important;
@@ -300,6 +303,19 @@
       margin: 0;
     }
   }
+  .emergency-card {
+  border-left: 5px solid #ff6b6b;
+  transition: all 0.3s ease-in-out;
+  background: #ffffff;
+}
+.emergency-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+.emergency-card i {
+  min-width: 32px;
+}
+
 </style>
 </head>
 
@@ -424,7 +440,7 @@
   </div>
 </section>
 
-<section id="cpr-videos" class="section py-5" style="background: #f9f9f9;">
+<section id="cpr-videos" class="section pt-5" style="background: #f9f9f9;">
   <div class="container" data-aos="fade-up">
 
     <!-- Section Header -->
@@ -609,7 +625,7 @@ The video also explains how to give rescue breaths safely, including how to tilt
       </div>
     </div>
   </div>
-    <div class="video-row-minimal">
+    <div class="video-row-minimal video-row-minimal2">
     <div class="video-col-minimal">
       <div class="ratio ratio-9x16">
         <video controls poster="assets/img/9.png" ><source src="assets/img/8.mp4" type="video/mp4"></video>
@@ -630,11 +646,168 @@ The video also emphasizes the importance of staying calm and listening carefully
   </div>
 
 </section>
+<section id="emergency-guide" class="section py-5" style="background: #f8fafd;">
+  <div class="container" data-aos="fade-up">
+
+    <!-- Section Title for Desktop -->
+    <div class="section-title d-none d-md-block">
+      <div class="section-title-label">
+        <small>Emergency Toolkit</small>
+        <h2>Step-by-Step Emergency Response Guide</h2>
+      </div>
+      <p>
+        Learn how to respond confidently in critical moments. This guide covers essential first aid procedures—from CPR and choking to burns, AED use, and more.
+      </p>
+    </div>
+
+    <!-- Section Title for Mobile -->
+    <div class="section-title-mobile d-block d-md-none rounded-4 p-4 mb-4">
+      <div class="text-center">
+        <small class="text-uppercase fw-semibold" style="letter-spacing: 0.05em; color:#fbb813;">Emergency Toolkit</small>
+        <h2 class="fw-bold mt-2 mb-3" style="font-size: 1.5rem; color: #222a44;">Step-by-Step Emergency Response Guide</h2>
+        <p class="text-muted" style="font-size: 1rem; line-height: 1.6;">
+          Learn how to respond confidently in critical moments. This guide covers essential first aid procedures—from CPR and choking to burns, AED use, and more.
+        </p>
+      </div>
+    </div>
+
+    <!-- Cards Grid -->
+    <div class="row g-4">
+      <!-- CPR -->
+      <div class="col-md-6 col-lg-4">
+        <div class="p-4 h-100 rounded-4 shadow-sm emergency-card">
+          <div class="d-flex align-items-center mb-2">
+            <i class="bi bi-heart-pulse fs-2 text-danger me-3"></i>
+            <h5 class="fw-bold mb-0 text-danger">CPR</h5>
+          </div>
+          <ul class="mb-2 ps-3">
+            <li>Unresponsive & not breathing</li>
+            <li>100–120 compressions/min</li>
+            <li>2 inches deep, breaths if trained</li>
+            <li>Gentler for children/infants</li>
+          </ul>
+          <small class="text-muted">CPR can double/triple survival (AHA)</small>
+        </div>
+      </div>
+
+      <!-- AED -->
+      <div class="col-md-6 col-lg-4">
+        <div class="p-4 h-100 rounded-4 shadow-sm emergency-card">
+          <div class="d-flex align-items-center mb-2">
+            <i class="bi bi-lightning-charge fs-2 text-warning me-3"></i>
+            <h5 class="fw-bold mb-0 text-danger">AED</h5>
+          </div>
+          <ul class="mb-2 ps-3">
+            <li>Use on non-breathing person</li>
+            <li>Follow voice prompts</li>
+            <li>Attach pads & deliver shock</li>
+            <li>Resume CPR right after</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bleeding -->
+      <div class="col-md-6 col-lg-4">
+        <div class="p-4 h-100 rounded-4 shadow-sm emergency-card">
+          <div class="d-flex align-items-center mb-2">
+            <i class="bi bi-droplet-half fs-2 text-primary me-3"></i>
+            <h5 class="fw-bold mb-0 text-danger">Bleeding</h5>
+          </div>
+          <ul class="mb-2 ps-3">
+            <li>Firm pressure with cloth</li>
+            <li>Elevate if possible</li>
+            <li>Tourniquet only if severe</li>
+            <li>Don’t remove embedded objects</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Choking -->
+      <div class="col-md-6 col-lg-4">
+        <div class="p-4 h-100 rounded-4 shadow-sm emergency-card">
+          <div class="d-flex align-items-center mb-2">
+            <i class="bi bi-person-dash fs-2 text-danger me-3"></i>
+            <h5 class="fw-bold mb-0 text-danger">Choking</h5>
+          </div>
+          <ul class="mb-2 ps-3">
+            <li>Ask if the person is choking</li>
+            <li>Abdominal thrusts above navel</li>
+            <li>Back slaps/chest thrusts for infants</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Burns -->
+      <div class="col-md-6 col-lg-4">
+        <div class="p-4 h-100 rounded-4 shadow-sm emergency-card">
+          <div class="d-flex align-items-center mb-2">
+            <i class="bi bi-fire fs-2 text-warning me-3"></i>
+            <h5 class="fw-bold mb-0 text-danger">Burns & Cuts</h5>
+          </div>
+          <ul class="mb-2 ps-3">
+            <li>Cool with water 10–15 minutes</li>
+            <li>Don’t use ice or ointments</li>
+            <li>Cover deep burns, seek care</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Drowning -->
+      <div class="col-md-6 col-lg-4">
+        <div class="p-4 h-100 rounded-4 shadow-sm emergency-card">
+          <div class="d-flex align-items-center mb-2">
+            <i class="bi bi-droplet fs-2 text-info me-3"></i>
+            <h5 class="fw-bold mb-0 text-danger">Drowning</h5>
+          </div>
+          <ul class="mb-2 ps-3">
+            <li>Ensure water safety first</li>
+            <li>Start CPR if not breathing</li>
+            <li>Use AED if available</li>
+            <li>Keep warm on firm surface</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Fracture -->
+      <div class="col-md-6 col-lg-4">
+        <div class="p-4 h-100 rounded-4 shadow-sm emergency-card">
+          <div class="d-flex align-items-center mb-2">
+            <i class="bi bi-bandaid fs-2 text-secondary me-3"></i>
+            <h5 class="fw-bold mb-0 text-danger">Fracture</h5>
+          </div>
+          <ul class="mb-2 ps-3">
+            <li>Look for deformity or pain</li>
+            <li>Immobilize with splint</li>
+            <li>Don't move unless necessary</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Heatstroke -->
+      <div class="col-md-6 col-lg-4">
+        <div class="p-4 h-100 rounded-4 shadow-sm emergency-card">
+          <div class="d-flex align-items-center mb-2">
+            <i class="bi bi-thermometer-high fs-2 text-danger me-3"></i>
+            <h5 class="fw-bold mb-0 text-danger">Heatstroke</h5>
+          </div>
+          <ul class="mb-2 ps-3">
+            <li>Temp >104°F, confusion</li>
+            <li>Move to shade, cool body</li>
+            <li>Give water if conscious</li>
+            <li>Call emergency services</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 <!-- Extra Resources Section -->
 <section id="extra-resources" class="section py-5" style="background: #ffffff;">
   <div class="container" data-aos="fade-up">
     <!-- Section Header -->
-    <div class="section-title d-none d-block" style="padding-bottom: 20px;">
+    <div class="section-title d-none d-md-block" style="padding-bottom: 20px;">
       <div class="section-title-label">
         <small>Extra Resources</small>
         <h2>Trusted Training from Global Experts</h2>
@@ -643,14 +816,14 @@ The video also emphasizes the importance of staying calm and listening carefully
 
 
     <div class="section-title-mobile d-block d-md-none rounded-4 p-4 mb-4">
-  <div class="text-center">
-    <small class="text-uppercase fw-semibold" style="letter-spacing: 0.05em; color:#fbb813;" >Extra Resources</small>
-    <h2 class="fw-bold mt-2 mb-3" style="font-size: 1.5rem; color: #222a44;">Supplement Your CPR Knowledge</h2>
-    <p class="text-muted mm" style="font-size: 1rem; line-height: 1.6; text-align: center;">
-      Trusted Training from Global Experts
-    </p>
-  </div>
-</div>
+      <div class="text-center">
+        <small class="text-uppercase fw-semibold" style="letter-spacing: 0.05em; color:#fbb813;" >Extra Resources</small>
+        <h2 class="fw-bold mt-2 mb-3" style="font-size: 1.5rem; color: #222a44;">Supplement Your CPR Knowledge</h2>
+        <p class="text-muted mm" style="font-size: 1rem; line-height: 1.6; text-align: center;">
+          Trusted Training from Global Experts
+        </p>
+      </div>
+    </div>
 
     <!-- Two-column layout -->
 <div class="row g-4 align-items-stretch">
